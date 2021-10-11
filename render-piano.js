@@ -17,6 +17,9 @@ export function renderPiano(piano) {
     const pianoPrice = document.createElement('p');
     pianoCategory.textContent = piano.price;
 
-    pianoCard.append(pianoHeader, img, pianoDescription, pianoCategory, pianoPrice);
+    const addButton = document.createElement('button');
+    addButton.textContent = 'Add to cart';
+
+    pianoCard.append(pianoHeader, img, pianoDescription, pianoCategory, pianoPrice, addButton);
     return pianoCard;
 }
