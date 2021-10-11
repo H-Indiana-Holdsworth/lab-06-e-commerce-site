@@ -14,8 +14,16 @@ h1 {
 img {
     width: auto;
     height: 400px;
+   
+}
+
+.piano-card {
     padding: 15px;
     border: 5px solid black;
-    border-radius: 10%;
+    border-radius: 8%;
     margin: 10px;
+}
+
+button {
+    border-radius: 10%;
 }
