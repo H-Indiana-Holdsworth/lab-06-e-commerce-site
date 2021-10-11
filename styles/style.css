@@ -13,10 +13,6 @@ h2 {
     font-weight: bold;
 }
 
-p {
-
-}
-
 #product-list {
     display: flex;
     flex-direction: row;
