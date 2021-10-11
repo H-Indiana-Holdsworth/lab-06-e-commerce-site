@@ -6,8 +6,8 @@ const productList = document.getElementById('product-list');
 
 // set event listeners 
 for (let piano of pianos) {
-  const pianoCard = renderPiano(piano);
-  productList.append(pianoCard);
+    const pianoCard = renderPiano(piano);
+    productList.append(pianoCard);
 }
   // get user input
   // use user input to update state 
