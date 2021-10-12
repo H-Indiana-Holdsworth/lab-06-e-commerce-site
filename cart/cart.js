@@ -14,6 +14,8 @@ import { cart } from '../data/cart-data.js';
 import { pianos } from '../data/piano.js';
 import { findById } from '../utils.js';
 import { renderLineItems } from './render-line-items.js';
+import { calculateOrderTotal } from '../utils.js';
+import { toUSD } from '../utils.js';
 
 // cartItem: {id: '1', qty: 1}
 const tbody = document.getElementById('table-body');
@@ -24,3 +26,7 @@ for (let cartItem of cart) {
 
     tbody.appendChild(tr);
 }
+
+const orderTotal = calculateOrderTotal(cart, pianos);
+const tdOrderTotal = document.getElementById('total');
+tdOrderTotal.textContent = toUSD(orderTotal);
