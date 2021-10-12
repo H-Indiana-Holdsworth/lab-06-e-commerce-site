@@ -5,7 +5,7 @@ export const pianos = [
         img:' ./assets/steinway-image.jpeg',
         description: 'A fully restored Model D, built during the golden age of Steinway & Sons quality',
         category: 'pianos',
-        price: '$180,000',
+        price: 180000,
     },
     {
         id: '2',
@@ -13,7 +13,7 @@ export const pianos = [
         img:' ./assets/yamaha-image.jpeg',
         description: 'A hand-built 1987 Yamaha at an unbeatable price!',
         category: 'pianos',
-        price: '$26,888',
+        price: 26888,
     },
     {
         id: '3',
@@ -21,7 +21,7 @@ export const pianos = [
         img:' ./assets/kawai-image.jpeg',
         description: 'The crown jewel of Kawai, a fully transparent lucite body grand piano',
         category: 'pianos',
-        price: '$150,000',
+        price: 150000,
     },
     {
         id: '4',
@@ -29,7 +29,7 @@ export const pianos = [
         img:' ./assets/red-image.jpeg',
         description: 'A designer polished Red Grand Piano',
         category: 'pianos',
-        price: '$80,000',
+        price: 80000,
     },
     {
         id: '5',
@@ -37,6 +37,6 @@ export const pianos = [
         img:' ./assets/upright-image.jpeg',
         description: 'An antique Kimball Victorian upright piano',
         category: 'pianos',
-        price: '$20,000',
+        price: 20000,
     },
 ];
