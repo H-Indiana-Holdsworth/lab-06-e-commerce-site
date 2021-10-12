@@ -1,7 +1,7 @@
 // IMPORT MODULES under test here:
 // import { example } from '../example.js';
 import { renderPiano } from '../render-piano.js';
-import { pianos } from '../piano.js';
+import { pianos } from '../data/piano.js';
 
 const test = QUnit.test;
 
