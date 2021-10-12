@@ -13,26 +13,14 @@
 import { cart } from '../data/cart-data.js';
 import { pianos } from '../data/piano.js';
 import { findById } from '../utils.js';
+import { renderLineItems } from './render-line-items.js';
 
-// cartItem: {id: '1', qty: 6}
+// cartItem: {id: '1', qty: 1}
 const tbody = document.getElementById('table-body');
 for (let cartItem of cart) {
     const pianoData = findById(cartItem.id, pianos);
 
-    const tr = document.createElement('tr');
+    const tr = renderLineItems(cartItem, pianoData);
 
-    const tdName = document.createElement('td');
-    tdName.textContent = pianoData.name;
-
-    const tdPrice = document.createElement('td');
-    tdPrice.textContent = pianoData.price;
-
-    const tdQty = document.createElement('td');
-    tdQty.textContent = cartItem.qty;
-
-    const tdTotal = document.createElement('td');
-    tdTotal.textContent = cartItem.qty * pianoData.price;
-
-    tr.append(tdName, tdPrice, tdQty, tdTotal);
     tbody.appendChild(tr);
 }

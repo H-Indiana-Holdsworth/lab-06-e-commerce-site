@@ -15,7 +15,7 @@ test('findById should return the piano matching the ID', (expect) => {
         img:' ./assets/steinway-image.jpeg',
         description: 'A fully restored Model D, built during the golden age of Steinway & Sons quality',
         category: 'pianos',
-        price: '$180,000',
+        price: 180000,
     };
     //Act 
     // Call the function you're testing and set the result to a const
