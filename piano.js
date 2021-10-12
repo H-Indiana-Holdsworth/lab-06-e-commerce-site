@@ -39,4 +39,4 @@ export const pianos = [
         category: 'pianos',
         price: '$20,000',
     },
-]
+];
