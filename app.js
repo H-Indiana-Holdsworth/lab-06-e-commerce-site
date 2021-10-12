@@ -3,7 +3,6 @@ import { renderPiano } from './render-piano.js';
 import { pianos } from './piano.js';
 const productList = document.getElementById('product-list');
 // initialize global state
-
 // set event listeners 
 for (let piano of pianos) {
     const pianoCard = renderPiano(piano);
