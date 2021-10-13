@@ -29,6 +29,14 @@ export function toUSD(number) {
     // get the cart from local storage
     // parse it from JSON to javascript
     // if the cart doesn't exist then return an empty array
+export function getCart(){
+
+    const cartString = localStorage.getItem('CART') || '[]';
+
+    const cart = JSON.parse(cartString);
+    
+    return cart;
+}
 
 // addITem(id) --> increment by 1
     // call getCart()
