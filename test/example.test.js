@@ -88,10 +88,11 @@ test('clear cart should remove all items from the cart', (expect)=>{
         { id: '1', qty: 1 },
         { id: '2', qty: 2 }
     ];
-    localStorage.removeItem('CART', fakeCart);
+    localStorage.setItem('CART', JSON.stringify(fakeCart));
+    localStorage.removeItem('CART');
     // act
-    const cart = getCart();
     const expected = [];
+    const actual = getCart();
     // expect
-    expect.deepEqual(cart, expected);
+    expect.deepEqual(actual, expected);
 });
