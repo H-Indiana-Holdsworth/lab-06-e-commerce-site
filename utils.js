@@ -24,3 +24,19 @@ export function calculateOrderTotal(cart, sodas) {
 export function toUSD(number) {
     return number.toLocaleString('en-us', { style: 'currency', currency: 'USD' });
 }
+
+// getCart
+    // get the cart from local storage
+    // parse it from JSON to javascript
+    // if the cart doesn't exist then return an empty array
+
+// addITem(id) --> increment by 1
+    // call getCart()
+    // use findByID to find a matching cart
+    // if cartItem is found, qty ++
+    // else create a new cartItem with id and qty = 1
+    // stringify the cart back to JSON 
+    // set the cart to localstorage
+
+//clearCart
+    //local.storage.removeItem('CART')
