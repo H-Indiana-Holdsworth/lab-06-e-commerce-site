@@ -39,3 +39,13 @@ test('getCart should return the cart if it exists', (expect)=>{
     //assert
     expect.deepEqual(cart, fakeCart);
 });
+
+test('getCart should return an empty array if the cart does not exist', (expect)=>{
+    // arrange
+    // nothing to arrange because there's nothing in localStorage
+
+    // act
+    const cart = getCart();
+    // assert
+    expect.deepEqual(cart, []);
+});
