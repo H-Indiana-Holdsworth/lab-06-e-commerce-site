@@ -3,7 +3,7 @@
 //import { renderPiano } from '../render-piano.js';
 import { pianos } from '../data/piano.js';
 import { findById } from '../utils.js';
-import { getCart } from '../utils.js';
+import { getCart, addItem } from '../utils.js';
 
 const test = QUnit.test;
 
@@ -45,7 +45,39 @@ test('getCart should return an empty array if the cart does not exist', (expect)
     // nothing to arrange because there's nothing in localStorage
 
     // act
+    localStorage.removeItem('CART');
     const cart = getCart();
     // assert
     expect.deepEqual(cart, []);
+});
+
+test('addItem should increment the quantity of the item in the cart', (expect)=>{
+    // arrange
+    const fakeCart = [
+        { id: '1', qty: 1 },
+        { id: '2', qty: 2 }
+    ];
+    localStorage.setItem('CART', JSON.stringify(fakeCart));
+    // act
+    addItem('1');
+    const cart = getCart();
+    const expected = [
+        { id: '1', qty: 2 },
+        { id: '2', qty: 2 }
+    ];
+    // assert
+    expect.deepEqual(cart, expected);
+});
+
+test('addItem should add an item if its not already there', (expect)=>{
+    // arrange
+    localStorage.removeItem('CART');
+
+    const expected = [{ id: '1', qty: 1 }];
+    // act
+    addItem('1');
+    const cart = getCart();
+
+    // expect
+    expect.deepEqual(cart, expected);
 });

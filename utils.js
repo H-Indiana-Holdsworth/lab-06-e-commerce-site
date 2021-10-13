@@ -34,17 +34,29 @@ export function getCart(){
     const cartString = localStorage.getItem('CART') || '[]';
 
     const cart = JSON.parse(cartString);
-    
+
     return cart;
 }
 
-// addITem(id) --> increment by 1
+// addItem(id) --> increment by 1
     // call getCart()
     // use findByID to find a matching cart
     // if cartItem is found, qty ++
     // else create a new cartItem with id and qty = 1
     // stringify the cart back to JSON 
     // set the cart to localstorage
+export function addItem(id){
+    const cart = getCart();
+    const cartItem = findById(id, cart);
+    if (cartItem) {
+        cartItem.qty++;
+    } else {
+        const newItem = { id: id, qty: 1 };
+        cart.push(newItem);
+    }
+    const stringCart = JSON.stringify(cart);
+    localStorage.setItem('CART', stringCart);
+}
 
 //clearCart
     //local.storage.removeItem('CART')
