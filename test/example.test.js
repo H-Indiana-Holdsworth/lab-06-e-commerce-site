@@ -81,3 +81,17 @@ test('addItem should add an item if its not already there', (expect)=>{
     // expect
     expect.deepEqual(cart, expected);
 });
+
+test('clear cart should remove all items from the cart', (expect)=>{
+    // arrange
+    const fakeCart = [
+        { id: '1', qty: 1 },
+        { id: '2', qty: 2 }
+    ];
+    localStorage.removeItem('CART', fakeCart);
+    // act
+    const cart = getCart();
+    const expected = [];
+    // expect
+    expect.deepEqual(cart, expected);
+});

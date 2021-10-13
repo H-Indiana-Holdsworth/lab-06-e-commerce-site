@@ -60,3 +60,7 @@ export function addItem(id){
 
 //clearCart
     //local.storage.removeItem('CART')
+export function clearCart(){
+    localStorage.removeItem('CART');
+    window.location.replace('..');
+}
