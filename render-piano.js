@@ -5,6 +5,11 @@ export function renderPiano(piano) {
     const pianoHeader = document.createElement('h2');
     pianoHeader.textContent = piano.name;
 
+    const addButton = document.createElement('button');
+    addButton.textContent = 'Add to cart';
+    addButton.id = piano.id;
+    addButton.classList.add('add-button');
+
     const img = document.createElement('img');
     img.src = piano.img;
 
@@ -16,9 +21,6 @@ export function renderPiano(piano) {
 
     const pianoPrice = document.createElement('p');
     pianoCategory.textContent = piano.price;
-
-    const addButton = document.createElement('button');
-    addButton.textContent = 'Add to cart';
 
     pianoCard.append(pianoHeader, img, pianoDescription, pianoCategory, pianoPrice, addButton);
     return pianoCard;
