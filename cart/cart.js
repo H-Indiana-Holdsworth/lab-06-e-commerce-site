@@ -10,14 +10,16 @@
 //      <td>$180,000</td>
 //  </tr>
 
-import { pianos } from '../data/piano.js';
-import { clearCart, findById, getCart } from '../utils.js';
+//import { pianos } from '../data/piano.js';
+import { clearCart, findById, getCart, getProducts } from '../utils.js';
 import { renderLineItems } from './render-line-items.js';
 import { calculateOrderTotal } from '../utils.js';
 import { toUSD } from '../utils.js';
 
 const cart = getCart();
 // cartItem: {id: '1', qty: 1}
+const pianos = getProducts();
+
 const tbody = document.getElementById('table-body');
 for (let cartItem of cart) {
     const pianoData = findById(cartItem.id, pianos);

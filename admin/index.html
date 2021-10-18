@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+</head>
+<body>
+    <header>
+        <a href="../index.html">Gallery</a>
+        <a href="../cart/index.html">Your Cart</a>
+    </header>
+
+    <form id="piano-form">
+        <label>
+            ID
+            <input type="text" name="id" id="id">
+        </label>
+        
+        <label>
+            Name
+            <input type="text" name="name" id="name">
+        </label>
+        
+        <label>Image
+            <input type="text" name="img" id="img">
+        </label>
+        
+        <label>
+            Description
+            <input type="text" name="description" id="description">
+        </label>
+        
+        <label>
+            Category
+            <input type="text" name="category" id="category">
+        </label>
+        
+        <label>
+            Price
+            <input type="text" name="price" id="price">
+        </label>
+
+        <button id="submit-button">Add a new piano!</button>
+
+        <script type="module" src="../utils.js"></script>
+        <script type="module" src="../admin/add-products.js"></script>
+    </form>
+</body>
+</html>
