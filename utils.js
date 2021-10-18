@@ -1,3 +1,5 @@
+import { pianos } from './data/piano';
+
 export function findById(id, pianos) {
     for (let piano of pianos) {
         if (piano.id === id) {
@@ -63,4 +65,18 @@ export function addItem(id){
 export function clearCart(){
     localStorage.removeItem('CART');
     window.location.replace('..');
+}
+
+export function getProducts(){
+    //checks to see if there are any products in local storage
+    let lsProducts = localStorage.getItem('PRODUCTS');
+    const products = JSON.parse(lsProducts);
+    //returns products in local storage
+    //if not, sets hard-coded products into localstorage
+    if (!products) {
+        const pianoString = JSON.stringify(pianos);
+        localStorage.setItem('PRODUCTS', pianoString);
+    }
+    //returns the products
+    return products || pianos;
 }
