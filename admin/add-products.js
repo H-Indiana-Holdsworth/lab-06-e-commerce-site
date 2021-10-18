@@ -23,6 +23,8 @@ form.addEventListener('submit', (e)=>{
 
     addProduct(newPiano);
     alert('new piano added!');
+
+    form.reset();
 });
 
 //reset form
