@@ -3,7 +3,6 @@ export function renderPiano(piano) {
     pianoCard.classList.add('piano-card');
 
     const pianoHeader = document.createElement('h2');
-    pianoHeader.textContent = piano.name;
 
     const addButton = document.createElement('button');
     addButton.textContent = 'Add to cart';

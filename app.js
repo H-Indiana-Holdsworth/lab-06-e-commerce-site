@@ -25,3 +25,4 @@ for (let addBtn of addButtons) {
         alert('Piano added to cart');
     });
 }
+foods
