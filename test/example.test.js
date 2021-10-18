@@ -2,7 +2,7 @@
 // import { example } from '../example.js';
 //import { renderPiano } from '../render-piano.js';
 import { pianos } from '../data/piano.js';
-import { findById } from '../utils.js';
+import { findById, getProducts, addProduct } from '../utils.js';
 import { getCart, addItem } from '../utils.js';
 
 const test = QUnit.test;
@@ -95,4 +95,24 @@ test('clear cart should remove all items from the cart', (expect)=>{
     const actual = getCart();
     // expect
     expect.deepEqual(actual, expected);
+});
+
+test('addProduct should add a product to the products array', (expect)=>{
+    //arrange
+    let products = getProducts();
+    const newProduct = {
+        id: '1',
+        name: 'Steinway Model D',
+        img:' ./assets/steinway-image.jpeg',
+        description: 'A fully restored Model D, built during the golden age of Steinway & Sons quality',
+        category: 'pianos',
+        price: 180000
+    };
+
+    //act
+    addProduct(newProduct);
+    
+    //assert
+    products = getProducts();
+    expect.equal(products.length, 6);
 });

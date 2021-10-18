@@ -80,3 +80,15 @@ export function getProducts(){
     //returns the products
     return products || pianos;
 }
+
+export function addProduct(newPiano){
+    //get
+    let products = getProducts();
+
+    //modify
+    products.push(newPiano);
+
+    //set
+    let productsString = JSON.stringify(products);
+    localStorage.setItem('PRODUCTS', productsString);
+}
