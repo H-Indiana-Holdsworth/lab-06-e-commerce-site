@@ -1,4 +1,4 @@
-import { pianos } from './data/piano';
+import { pianos } from './data/piano.js';
 
 export function findById(id, pianos) {
     for (let piano of pianos) {
